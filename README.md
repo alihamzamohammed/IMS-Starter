@@ -45,6 +45,7 @@ We use [SemVer](http://semver.org/) for versioning.
 ## Authors
 
 * **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+* **Ali Hamza Mohammed** - *Everything else* - [alihamzamohammed](https://github.com/alihamzamohammed)
 
 ## License
 
