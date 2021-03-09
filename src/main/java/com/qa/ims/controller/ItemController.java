@@ -39,7 +39,7 @@ public class ItemController implements CrudController<Item> {
 			for (Item item : items) {
 				LOGGER.info(item.formattedString());
 			}
-		}	
+		}
 		return items;
 	}
 
@@ -53,7 +53,8 @@ public class ItemController implements CrudController<Item> {
 		LOGGER.info("Please enter the item's price:");
 		double price = utils.getDouble();
 		Item item = itemDAO.create(new Item(name, price));
-		LOGGER.info(String.format("Item %s created, for %s%nThis item's ID is: %d", item.getName(), item.getFormattedPrice(), item.getId()));
+		LOGGER.info(String.format("Item %s created, for %s%nThis item's ID is: %d", item.getName(),
+				item.getFormattedPrice(), item.getId()));
 		return item;
 	}
 
@@ -69,7 +70,8 @@ public class ItemController implements CrudController<Item> {
 		LOGGER.info("Please enter the item's new price:");
 		double price = utils.getDouble();
 		Item item = itemDAO.update(new Item(id, name, price));
-		LOGGER.info(String.format("Item %s updated, for %s%nThis item's ID is: %d", item.getName(), item.getFormattedPrice(), item.getId()));
+		LOGGER.info(String.format("Item %s updated, for %s%nThis item's ID is: %d", item.getName(),
+				item.getFormattedPrice(), item.getId()));
 		return item;
 	}
 
@@ -90,6 +92,7 @@ public class ItemController implements CrudController<Item> {
 			return itemDAO.delete(id);
 		} else {
 			LOGGER.info("Deletion canceled.");
+
 		}
 		return 0;
 	}

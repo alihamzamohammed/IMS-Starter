@@ -1,68 +1,38 @@
-Coverage: 34%
-# Project Title
+Coverage: 72%
+# Inventory Management System
 
-One Paragraph of project description goes here
+IMS system, to communicate Customer, Item, and Order information with a database
+Can create, read, update, and delete from a compatible database
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Download latest release. All dependencies should be included.
+To compile from source: `mvn package`
+Bypass tests: `mvn package -Dmaven.test.skip=true`
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+Java 1.8
+MySQL Server Version 8.0.23
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Compile program from source using `mvn package`, and use the .jar file with dependencies to run the program
+Alternatively, download the latest release, v0.0.3-alpha from the GitHub releases page and use that instead
+Ensure your database is correctly set up beforehand. All required queries are in `src/main/resources/sql-schema.sql`
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+Unit testing for DAO, Domain and Controller classes included
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+Tests can be run with `mvn test`, and coverage reports can be generated through `mvn jacoco:report`
 
 ```
-Give an example
+mvn test
+mvn jacoco:report
 ```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -84,6 +54,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **Jordan Harrison** - *Other Contributions* - [JHarry444](https://github.com/JHarry444)
+* **Ed Reynolds** - *Other Contributions* - [Edrz-96](https://github.com/Edrz-96)
